@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ ! "$*" ]; then
+    args=tests/
+else
+    args=$*
+fi
+
+./vendor/bin/phpunit $args
