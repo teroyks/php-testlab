@@ -1,4 +1,13 @@
-<phpunit
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="location of xsd file"
     colors="true"
+    defaultTestSuite="unit"
     printerClass="Sempro\PHPUnitPrettyPrinter\PrettyPrinter">
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests/unit</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
