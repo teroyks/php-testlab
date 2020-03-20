@@ -24,4 +24,10 @@
          $lastDayOfNextMonth = (clone $date)->modify('last day of next month');
          $this->assertEquals($monthFromDate, min($lastDayOfNextMonth, $modifiedDate));
      }
+
+     function testMonthDoesNotWrapAround()
+     {
+         $this->expectException(Exception::class);
+         new DateTime('2020-13-01');
+     }
  }
