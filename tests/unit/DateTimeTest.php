@@ -30,4 +30,11 @@
          $this->expectException(Exception::class);
          new DateTime('2020-13-01');
      }
+
+     function testRelativeCompoundDate()
+     {
+         $date = new DateTime('2020-03-22 09:00:00');
+         $date->modify('+1 day 00:00:01');
+         $this->assertEquals(new DateTime('2020-03-23 00:00:01'), $date, 'Should modify relative date and absolute time at the same time.');
+     }
  }
