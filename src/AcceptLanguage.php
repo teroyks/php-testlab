@@ -11,7 +11,7 @@
  * @param string $value Accept-Language value
  * @param array $availableLanguages Choose only from these languages (default = all)
  * 
- * @return Two-letter country code (lowercase), or null if not found.
+ * @return string|null Two-letter country code (lowercase), or null if not found.
  */
 function getCountryCode(string $value, array $availableLanguages = []): ?string
 {
