@@ -63,4 +63,16 @@ class AcceptLanguageTest extends TestCase
             'Should pick allowed code with highest priority.'
         );
     }
+
+    function testInvalidCodes()
+    {
+        $this->assertNull(
+            getCountryCode(', foo'),
+            'Should not crash even on an invalid code.'
+        );
+        $this->assertNull(
+            getCountryCode(';'),
+            'Should handle all parts missing.'
+        );
+    }
 }

@@ -43,6 +43,8 @@ function parseSingleItem(string $item): ?array
     $defaultPriority = 1;
 
     preg_match('/^([^;]*)(?:;q=([\d.]+))?$/', trim($item), $matches);
+    if (!$matches) return null;
+    
     $code = parseCountryFromCode($matches[1]);
 
     return $code
